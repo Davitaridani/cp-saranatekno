@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  h1 {
+    @apply lg:title-text text-3xl
+  }
+}
+
+@layer utilities {
+  .title-text {
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 400;
+    letter-spacing: .3px;
+    color: #303030;
+  }
+  
+  .title-text-sm {
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: .3px;
+  }
+
+  .text-paragraf {
+    color: #717171;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: .3px;
+  }
+
+  .text-paragraf-sm {
+    color: #717171;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: .3px;
+  }
+}
+
+@layer components {
+  .input-form {
+    @apply border-black border rounded-md px-3 py-2 mt-1 mb-5 block;
+  }
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  z-index: 9999;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.gradient-btn {
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+}
